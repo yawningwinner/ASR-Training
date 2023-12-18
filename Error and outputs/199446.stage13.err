@@ -1,0 +1,20 @@
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/bin/python3 /nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/tokenize_text.py -f 2- --input - --output - --cleaner none --token_type char --non_linguistic_symbols none --remove_non_linguistic_symbols true
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/bin/python3 /nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/tokenize_text.py -f 2- --input - --output - --token_type char --non_linguistic_symbols none --remove_non_linguistic_symbols true --cleaner none
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/bin/python3 /nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/tokenize_text.py -f 2- --input - --output - --cleaner none --token_type word --non_linguistic_symbols none --remove_non_linguistic_symbols true
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/bin/python3 /nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/tokenize_text.py -f 2- --input - --output - --token_type word --non_linguistic_symbols none --remove_non_linguistic_symbols true --cleaner none

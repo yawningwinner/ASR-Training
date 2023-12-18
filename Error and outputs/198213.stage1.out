@@ -1,0 +1,81 @@
+Starting at Thursday 07 December 2023 12:58:40 PM IST
+Running on hosts: scn15-10g
+Running on 1 nodes.
+Running 2 tasks.
+Job id is 198213
+Job submission directory is : /nlsasfs/home/nltm-st/akankss/thish/expts/espnet_egs2_001_hindi_all_asr1
+2023-12-07T12:58:41 (asr.sh:283:main) ./asr.sh --stage 1 --stop-stage 1 --train_set train --valid_set dev --test_sets test --eval_valid_set true
+2023-12-07T12:58:41 (asr.sh:565:main) Skipped stages:  9 14 15 16 
+2023-12-07T12:58:41 (asr.sh:572:main) Stage 1: Data preparation for data/train, data/dev, etc.
+Removing old data files
+removed 'data/train/wav.scp'
+removed 'data/train/utt2spk'
+removed 'data/train/text'
+removed directory 'data/train'
+removed 'data/test/wav.scp'
+removed 'data/test/utt2spk'
+removed 'data/test/text'
+removed directory 'data/test'
+removed directory 'data/dev'
+removed directory 'data'
+Creating new data directories
+===================Generating kaldi-style input files===================
+GENERATING TRAIN SET
+Dropping files of duration greater than 15.0s. Dropped 598 files.
+                                                       0  ...         3
+0      /nlsasfs/home/nltm-st/akankss/datasets/ULCA/UL...  ...  M0000000
+1      /nlsasfs/home/nltm-st/akankss/datasets/ULCA/UL...  ...  M0000001
+2      /nlsasfs/home/nltm-st/akankss/datasets/shrutil...  ...  M0000002
+3      /nlsasfs/home/nltm-st/akankss/datasets/ULCA/UL...  ...  M0000003
+4      /nlsasfs/home/nltm-st/akankss/datasets/shrutil...  ...  M0000004
+...                                                  ...  ...       ...
+21741  /nlsasfs/home/nltm-st/akankss/datasets/ULCA/UL...  ...  M0022339
+21742  /nlsasfs/home/nltm-st/akankss/datasets/ULCA/UL...  ...  M0022340
+21743  /nlsasfs/home/nltm-st/akankss/datasets/shrutil...  ...  M0022341
+21744  /nlsasfs/home/nltm-st/akankss/datasets/shrutil...  ...  M0022342
+21745  /nlsasfs/home/nltm-st/akankss/datasets/ULCA/UL...  ...  M0022343
+
+[21746 rows x 4 columns]
+GENERATING TEST SET
+Dropping files of duration greater than 15.0s. Dropped 2 files.
+                                                      0  ...         3
+0     /nlsasfs/home/nltm-st/akankss/datasets/CVH/wav...  ...  M2256934
+1     /nlsasfs/home/nltm-st/akankss/datasets/CVH/wav...  ...  M2256935
+2     /nlsasfs/home/nltm-st/akankss/datasets/CVH/wav...  ...  M2256936
+3     /nlsasfs/home/nltm-st/akankss/datasets/CVH/wav...  ...  M2256937
+4     /nlsasfs/home/nltm-st/akankss/datasets/CVH/wav...  ...  M2256938
+...                                                 ...  ...       ...
+2371  /nlsasfs/home/nltm-st/akankss/datasets/PMS/wav...  ...  M2259307
+2372  /nlsasfs/home/nltm-st/akankss/datasets/PMS/wav...  ...  M2259308
+2373  /nlsasfs/home/nltm-st/akankss/datasets/PMS/wav...  ...  M2259309
+2374  /nlsasfs/home/nltm-st/akankss/datasets/PMS/wav...  ...  M2259310
+2375  /nlsasfs/home/nltm-st/akankss/datasets/PMS/wav...  ...  M2259311
+
+[2376 rows x 4 columns]
+GENERATING DEV SET
+Dropping files of duration greater than 15.0s. Dropped 0 files.
+                                                      0  ...         3
+0     /nlsasfs/home/nltm-st/akankss/datasets/kb_data...  ...  M2234365
+1     /nlsasfs/home/nltm-st/akankss/datasets/kb_data...  ...  M2234366
+2     /nlsasfs/home/nltm-st/akankss/datasets/kb_data...  ...  M2234367
+3     /nlsasfs/home/nltm-st/akankss/datasets/kb_data...  ...  M2234368
+4     /nlsasfs/home/nltm-st/akankss/datasets/kb_data...  ...  M2234369
+...                                                 ...  ...       ...
+2252  /nlsasfs/home/nltm-st/akankss/datasets/kb_data...  ...  M2236617
+2253  /nlsasfs/home/nltm-st/akankss/datasets/kb_data...  ...  M2236618
+2254  /nlsasfs/home/nltm-st/akankss/datasets/kb_data...  ...  M2236619
+2255  /nlsasfs/home/nltm-st/akankss/datasets/kb_data...  ...  M2236620
+2256  /nlsasfs/home/nltm-st/akankss/datasets/kb_data...  ...  M2236621
+
+[2257 rows x 4 columns]
+Preparing spk2utt from utt2spk
+Fixing data directories
+fix_data_dir.sh: kept all 21746 utterances.
+fix_data_dir.sh: old files are kept in data/train/.backup
+fix_data_dir.sh: kept all 2376 utterances.
+fix_data_dir.sh: old files are kept in data/test/.backup
+fix_data_dir.sh: kept all 2257 utterances.
+fix_data_dir.sh: old files are kept in data/dev/.backup
+Completed data preparation.
+2023-12-07T12:58:48 (asr.sh:1863:main) Successfully finished. [elapsed=7s]
+Ended at Thursday 07 December 2023 12:58:49 PM IST

@@ -1,0 +1,11 @@
+Starting at Sunday 10 December 2023 01:06:07 PM IST
+Running on hosts: scn15-10g
+Running on 1 nodes.
+Running 1 tasks.
+Job id is 199110
+Job submission directory is : /nlsasfs/home/nltm-st/akankss/thish/expts/espnet_egs2_001_hindi_all_asr1
+2023-12-10T13:06:11 (asr.sh:283:main) ./asr.sh --stage 9 --stop_stage 9 --train_set train --valid_set dev --test_sets test --use_ngram true --ngram_num 3
+2023-12-10T13:06:12 (asr.sh:565:main) Skipped stages:  14 15 16 
+2023-12-10T13:06:12 (asr.sh:1180:main) Stage 9: Ngram Training: train_set=dump/raw/lm_train.txt
+2023-12-10T13:06:27 (asr.sh:1863:main) Successfully finished. [elapsed=16s]
+Ended at Sunday 10 December 2023 01:06:28 PM IST

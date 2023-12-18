@@ -1,0 +1,19 @@
+Starting at Thursday 07 December 2023 07:01:14 PM IST
+Running on hosts: scn11-10g
+Running on 1 nodes.
+Running 1 tasks.
+Job id is 198321
+Job submission directory is : /nlsasfs/home/nltm-st/akankss/thish/expts/espnet_egs2_001_hindi_all_asr1
+2023-12-07T19:01:17 (asr.sh:283:main) ./asr.sh --stage 4 --stop_stage 4 --train_set train --valid_set dev --test_sets test
+2023-12-07T19:01:18 (asr.sh:565:main) Skipped stages:  9 14 15 16 
+2023-12-07T19:01:18 (asr.sh:800:main) Stage 4: Remove long/short data: dump/raw/org -> dump/raw
+utils/copy_data_dir.sh: copied data from dump/raw/org/train to dump/raw/train
+utils/validate_data_dir.sh: Successfully validated data-directory dump/raw/train
+fix_data_dir.sh: kept 21255 utterances out of 21746
+fix_data_dir.sh: old files are kept in dump/raw/train/.backup
+utils/copy_data_dir.sh: copied data from dump/raw/org/dev to dump/raw/dev
+utils/validate_data_dir.sh: Successfully validated data-directory dump/raw/dev
+fix_data_dir.sh: kept all 2257 utterances.
+fix_data_dir.sh: old files are kept in dump/raw/dev/.backup
+2023-12-07T19:01:22 (asr.sh:1863:main) Successfully finished. [elapsed=5s]
+Ended at Thursday 07 December 2023 07:01:22 PM IST

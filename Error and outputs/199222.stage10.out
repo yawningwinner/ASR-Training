@@ -1,0 +1,13 @@
+Starting at Monday 11 December 2023 10:25:57 AM IST
+Running on hosts: scn15-10g
+Running on 1 nodes.
+Running 32 tasks.
+Job id is 199222
+Job submission directory is : /nlsasfs/home/nltm-st/akankss/thish/expts/espnet_egs2_001_hindi_all_asr1
+2023-12-11T10:26:00 (asr.sh:283:main) ./asr.sh --stage 10 --stop_stage 10 --train_set train --valid_set dev --test_sets test --use_ngram true --asr_config conf/train_asr_e_branchformer.yaml --nbpe 128
+2023-12-11T10:26:01 (asr.sh:565:main) Skipped stages:  14 15 16 
+2023-12-11T10:26:01 (asr.sh:1190:main) Stage 10: ASR collect stats: train_set=dump/raw/train, valid_set=dump/raw/dev
+2023-12-11T10:26:01 (asr.sh:1241:main) Generate 'exp/asr_stats_raw_bpe128/run.sh'. You can resume the process from stage 10 using this script
+2023-12-11T10:26:01 (asr.sh:1245:main) ASR collect-stats started... log: 'exp/asr_stats_raw_bpe128/logdir/stats.*.log'
+2023-12-11T10:31:48 (asr.sh:1863:main) Successfully finished. [elapsed=348s]
+Ended at Monday 11 December 2023 10:31:48 AM IST

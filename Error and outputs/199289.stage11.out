@@ -1,0 +1,11 @@
+Starting at Monday 11 December 2023 12:45:14 PM IST
+Running on hosts: scn39-10g
+Running on 1 nodes.
+Running 32 tasks.
+Job id is 199289
+Job submission directory is : /nlsasfs/home/nltm-st/akankss/thish/expts/espnet_egs2_001_hindi_all_asr1
+2023-12-11T12:45:17 (asr.sh:283:main) ./asr.sh --stage 11 --stop_stage 11 --train_set train --valid_set dev --test_sets test --use_ngram true --asr_config conf/train_asr_e_branchformer.yaml --use_lm true --ngpu 8 --nbpe 128
+2023-12-11T12:45:18 (asr.sh:565:main) Skipped stages:  14 15 16 
+2023-12-11T12:45:18 (asr.sh:1309:main) Stage 11: ASR Training: train_set=dump/raw/train, valid_set=dump/raw/dev
+2023-12-11T12:45:18 (asr.sh:1408:main) Generate 'exp/asr_train_asr_e_branchformer_raw_bpe128/run.sh'. You can resume the process from stage 11 using this script
+2023-12-11T12:45:18 (asr.sh:1412:main) ASR training started... log: 'exp/asr_train_asr_e_branchformer_raw_bpe128/train.log'

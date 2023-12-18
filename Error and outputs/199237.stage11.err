@@ -1,0 +1,163 @@
+2023-12-11 11:18:47,892 (launch:94) INFO: /nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/bin/python3 /nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/launch.py --cmd 'run.pl --name exp/asr_train_asr_e_branchformer_raw_bpe30/train.log' --log exp/asr_train_asr_e_branchformer_raw_bpe30/train.log --ngpu 8 --num_nodes 1 --init_file_prefix exp/asr_train_asr_e_branchformer_raw_bpe30/.dist_init_ --multiprocessing_distributed true -- python3 -m espnet2.bin.asr_train --use_preprocessor true --bpemodel data/token_list/bpe_unigram30/bpe.model --token_type bpe --token_list data/token_list/bpe_unigram30/tokens.txt --non_linguistic_symbols none --cleaner none --g2p none --valid_data_path_and_name_and_type dump/raw/dev/wav.scp,speech,sound --valid_shape_file exp/asr_stats_raw_bpe30/valid/speech_shape --resume true --ignore_init_mismatch false --fold_length 80000 --output_dir exp/asr_train_asr_e_branchformer_raw_bpe30 --config conf/train_asr_e_branchformer.yaml --frontend_conf fs=16k --normalize=global_mvn --normalize_conf stats_file=exp/asr_stats_raw_bpe30/train/feats_stats.npz --train_data_path_and_name_and_type dump/raw/train/wav.scp,speech,sound --train_shape_file exp/asr_stats_raw_bpe30/train/speech_shape --fold_length 150 --train_data_path_and_name_and_type dump/raw/train/text,text,text --train_shape_file exp/asr_stats_raw_bpe30/train/text_shape.bpe --valid_data_path_and_name_and_type dump/raw/dev/text,text,text --valid_shape_file exp/asr_stats_raw_bpe30/valid/text_shape.bpe
+2023-12-11 11:18:48,010 (launch:237) INFO: single-node with 8gpu on distributed mode
+2023-12-11 11:18:48,019 (launch:348) INFO: log file: exp/asr_train_asr_e_branchformer_raw_bpe30/train.log
+run.pl: job failed, log is in exp/asr_train_asr_e_branchformer_raw_bpe30/train.log
+Command '['run.pl', '--name', 'exp/asr_train_asr_e_branchformer_raw_bpe30/train.log', '--gpu', '8', 'exp/asr_train_asr_e_branchformer_raw_bpe30/train.log', 'python3', '-m', 'espnet2.bin.asr_train', '--use_preprocessor', 'true', '--bpemodel', 'data/token_list/bpe_unigram30/bpe.model', '--token_type', 'bpe', '--token_list', 'data/token_list/bpe_unigram30/tokens.txt', '--non_linguistic_symbols', 'none', '--cleaner', 'none', '--g2p', 'none', '--valid_data_path_and_name_and_type', 'dump/raw/dev/wav.scp,speech,sound', '--valid_shape_file', 'exp/asr_stats_raw_bpe30/valid/speech_shape', '--resume', 'true', '--ignore_init_mismatch', 'false', '--fold_length', '80000', '--output_dir', 'exp/asr_train_asr_e_branchformer_raw_bpe30', '--config', 'conf/train_asr_e_branchformer.yaml', '--frontend_conf', 'fs=16k', '--normalize=global_mvn', '--normalize_conf', 'stats_file=exp/asr_stats_raw_bpe30/train/feats_stats.npz', '--train_data_path_and_name_and_type', 'dump/raw/train/wav.scp,speech,sound', '--train_shape_file', 'exp/asr_stats_raw_bpe30/train/speech_shape', '--fold_length', '150', '--train_data_path_and_name_and_type', 'dump/raw/train/text,text,text', '--train_shape_file', 'exp/asr_stats_raw_bpe30/train/text_shape.bpe', '--valid_data_path_and_name_and_type', 'dump/raw/dev/text,text,text', '--valid_shape_file', 'exp/asr_stats_raw_bpe30/valid/text_shape.bpe', '--ngpu', '8', '--multiprocessing_distributed', 'True']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/launch.py", line 384, in <module>
+    main()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/launch.py", line 375, in main
+    raise RuntimeError(
+RuntimeError: 
+################### The last 1000 lines of exp/asr_train_asr_e_branchformer_raw_bpe30/train.log ###################
+# python3 -m espnet2.bin.asr_train --use_preprocessor true --bpemodel data/token_list/bpe_unigram30/bpe.model --token_type bpe --token_list data/token_list/bpe_unigram30/tokens.txt --non_linguistic_symbols none --cleaner none --g2p none --valid_data_path_and_name_and_type dump/raw/dev/wav.scp,speech,sound --valid_shape_file exp/asr_stats_raw_bpe30/valid/speech_shape --resume true --ignore_init_mismatch false --fold_length 80000 --output_dir exp/asr_train_asr_e_branchformer_raw_bpe30 --config conf/train_asr_e_branchformer.yaml --frontend_conf fs=16k --normalize=global_mvn --normalize_conf stats_file=exp/asr_stats_raw_bpe30/train/feats_stats.npz --train_data_path_and_name_and_type dump/raw/train/wav.scp,speech,sound --train_shape_file exp/asr_stats_raw_bpe30/train/speech_shape --fold_length 150 --train_data_path_and_name_and_type dump/raw/train/text,text,text --train_shape_file exp/asr_stats_raw_bpe30/train/text_shape.bpe --valid_data_path_and_name_and_type dump/raw/dev/text,text,text --valid_shape_file exp/asr_stats_raw_bpe30/valid/text_shape.bpe --ngpu 8 --multiprocessing_distributed True 
+# Started at Mon Dec 11 11:18:48 IST 2023
+#
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/bin/python3 /nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/asr_train.py --use_preprocessor true --bpemodel data/token_list/bpe_unigram30/bpe.model --token_type bpe --token_list data/token_list/bpe_unigram30/tokens.txt --non_linguistic_symbols none --cleaner none --g2p none --valid_data_path_and_name_and_type dump/raw/dev/wav.scp,speech,sound --valid_shape_file exp/asr_stats_raw_bpe30/valid/speech_shape --resume true --ignore_init_mismatch false --fold_length 80000 --output_dir exp/asr_train_asr_e_branchformer_raw_bpe30 --config conf/train_asr_e_branchformer.yaml --frontend_conf fs=16k --normalize=global_mvn --normalize_conf stats_file=exp/asr_stats_raw_bpe30/train/feats_stats.npz --train_data_path_and_name_and_type dump/raw/train/wav.scp,speech,sound --train_shape_file exp/asr_stats_raw_bpe30/train/speech_shape --fold_length 150 --train_data_path_and_name_and_type dump/raw/train/text,text,text --train_shape_file exp/asr_stats_raw_bpe30/train/text_shape.bpe --valid_data_path_and_name_and_type dump/raw/dev/text,text,text --valid_shape_file exp/asr_stats_raw_bpe30/valid/text_shape.bpe --ngpu 8 --multiprocessing_distributed True
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[scn46-mn:0/8] 2023-12-11 11:20:29,536 (distributed_c10d:442) INFO: Added key: store_based_barrier_key:1 to store for rank: 0
+[scn46-mn:0/8] 2023-12-11 11:20:29,536 (distributed_c10d:476) INFO: Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1227, in main_worker
+    model = cls.build_model(args=args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/asr.py", line 502, in build_model
+    with open(args.token_list, encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/token_list/bpe_unigram30/tokens.txt'
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1227, in main_worker
+    model = cls.build_model(args=args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/asr.py", line 502, in build_model
+    with open(args.token_list, encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/token_list/bpe_unigram30/tokens.txt'
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+Process SpawnProcess-7:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1227, in main_worker
+    model = cls.build_model(args=args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/asr.py", line 502, in build_model
+    with open(args.token_list, encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/token_list/bpe_unigram30/tokens.txt'
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+Process SpawnProcess-4:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1227, in main_worker
+    model = cls.build_model(args=args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/asr.py", line 502, in build_model
+    with open(args.token_list, encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/token_list/bpe_unigram30/tokens.txt'
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+Process SpawnProcess-6:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1227, in main_worker
+    model = cls.build_model(args=args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/asr.py", line 502, in build_model
+    with open(args.token_list, encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/token_list/bpe_unigram30/tokens.txt'
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+Process SpawnProcess-3:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1227, in main_worker
+    model = cls.build_model(args=args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/asr.py", line 502, in build_model
+    with open(args.token_list, encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/token_list/bpe_unigram30/tokens.txt'
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+Process SpawnProcess-5:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1227, in main_worker
+    model = cls.build_model(args=args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/asr.py", line 502, in build_model
+    with open(args.token_list, encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/token_list/bpe_unigram30/tokens.txt'
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+Process SpawnProcess-8:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1227, in main_worker
+    model = cls.build_model(args=args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/asr.py", line 502, in build_model
+    with open(args.token_list, encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'data/token_list/bpe_unigram30/tokens.txt'
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/asr_train.py", line 23, in <module>
+    main()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/asr_train.py", line 19, in main
+    ASRTask.main(cmd=cmd)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1167, in main
+    while not ProcessContext(processes, error_queues).join():
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 149, in join
+    raise ProcessExitedException(
+torch.multiprocessing.spawn.ProcessExitedException: process 5 terminated with exit code 1
+# Accounting: time=110 threads=1
+# Ended (code 1) at Mon Dec 11 11:20:38 IST 2023, elapsed time 110 seconds
+

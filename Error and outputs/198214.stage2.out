@@ -1,0 +1,43 @@
+Starting at Thursday 07 December 2023 12:59:40 PM IST
+Running on hosts: scn15-10g
+Running on 1 nodes.
+Running 4 tasks.
+Job id is 198214
+Job submission directory is : /nlsasfs/home/nltm-st/akankss/thish/expts/espnet_egs2_001_hindi_all_asr1
+2023-12-07T12:59:41 (asr.sh:283:main) ./asr.sh --stage 2 --stop_stage 2 --speed_perturb_factors 0.9 1.0 1.1 --train_set train --valid_set dev --test_sets test --eval_valid_set true
+2023-12-07T12:59:41 (asr.sh:565:main) Skipped stages:  9 14 15 16 
+2023-12-07T12:59:41 (asr.sh:580:main) Stage 2: Speed perturbation: data/train -> data/train_sp
+text
+utt2lang
+text
+scripts/utils/perturb_data_dir_speed.sh: generated speed-perturbed version of data in data/train, in data/train_sp0.9
+fix_data_dir.sh: kept all 21746 utterances.
+fix_data_dir.sh: old files are kept in data/train_sp0.9/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp0.9
+text
+utt2lang
+text
+scripts/utils/perturb_data_dir_speed.sh: generated speed-perturbed version of data in data/train, in data/train_sp1.1
+fix_data_dir.sh: kept all 21746 utterances.
+fix_data_dir.sh: old files are kept in data/train_sp1.1/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/train_sp1.1
+utils/combine_data.sh --extra_files text  data/train_sp data/train_sp0.9 data/train data/train_sp1.1
+utils/combine_data.sh: combined utt2uniq
+utils/combine_data.sh [info]: not combining segments as it does not exist
+utils/combine_data.sh: combined utt2spk
+utils/combine_data.sh [info]: not combining utt2lang as it does not exist
+utils/combine_data.sh [info]: not combining utt2dur as it does not exist
+utils/combine_data.sh [info]: not combining utt2num_frames as it does not exist
+utils/combine_data.sh [info]: not combining reco2dur as it does not exist
+utils/combine_data.sh [info]: not combining feats.scp as it does not exist
+utils/combine_data.sh: combined text
+utils/combine_data.sh [info]: not combining cmvn.scp as it does not exist
+utils/combine_data.sh [info]: not combining vad.scp as it does not exist
+utils/combine_data.sh [info]: not combining reco2file_and_channel as it does not exist
+utils/combine_data.sh: combined wav.scp
+utils/combine_data.sh [info]: not combining spk2gender as it does not exist
+utils/combine_data.sh: combined text
+fix_data_dir.sh: kept all 65238 utterances.
+fix_data_dir.sh: old files are kept in data/train_sp/.backup
+2023-12-07T12:59:49 (asr.sh:1863:main) Successfully finished. [elapsed=8s]
+Ended at Thursday 07 December 2023 12:59:50 PM IST

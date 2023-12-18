@@ -1,0 +1,1017 @@
+2023-12-11 12:45:32,426 (launch:94) INFO: /nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/bin/python3 /nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/launch.py --cmd 'run.pl --name exp/asr_train_asr_e_branchformer_raw_bpe128/train.log' --log exp/asr_train_asr_e_branchformer_raw_bpe128/train.log --ngpu 8 --num_nodes 1 --init_file_prefix exp/asr_train_asr_e_branchformer_raw_bpe128/.dist_init_ --multiprocessing_distributed true -- python3 -m espnet2.bin.asr_train --use_preprocessor true --bpemodel data/token_list/bpe_unigram128/bpe.model --token_type bpe --token_list data/token_list/bpe_unigram128/tokens.txt --non_linguistic_symbols none --cleaner none --g2p none --valid_data_path_and_name_and_type dump/raw/dev/wav.scp,speech,sound --valid_shape_file exp/asr_stats_raw_bpe128/valid/speech_shape --resume true --ignore_init_mismatch false --fold_length 80000 --output_dir exp/asr_train_asr_e_branchformer_raw_bpe128 --config conf/train_asr_e_branchformer.yaml --frontend_conf fs=16k --normalize=global_mvn --normalize_conf stats_file=exp/asr_stats_raw_bpe128/train/feats_stats.npz --train_data_path_and_name_and_type dump/raw/train/wav.scp,speech,sound --train_shape_file exp/asr_stats_raw_bpe128/train/speech_shape --fold_length 150 --train_data_path_and_name_and_type dump/raw/train/text,text,text --train_shape_file exp/asr_stats_raw_bpe128/train/text_shape.bpe --valid_data_path_and_name_and_type dump/raw/dev/text,text,text --valid_shape_file exp/asr_stats_raw_bpe128/valid/text_shape.bpe
+2023-12-11 12:45:32,569 (launch:237) INFO: single-node with 8gpu on distributed mode
+2023-12-11 12:45:32,589 (launch:348) INFO: log file: exp/asr_train_asr_e_branchformer_raw_bpe128/train.log
+run.pl: job failed, log is in exp/asr_train_asr_e_branchformer_raw_bpe128/train.log
+Command '['run.pl', '--name', 'exp/asr_train_asr_e_branchformer_raw_bpe128/train.log', '--gpu', '8', 'exp/asr_train_asr_e_branchformer_raw_bpe128/train.log', 'python3', '-m', 'espnet2.bin.asr_train', '--use_preprocessor', 'true', '--bpemodel', 'data/token_list/bpe_unigram128/bpe.model', '--token_type', 'bpe', '--token_list', 'data/token_list/bpe_unigram128/tokens.txt', '--non_linguistic_symbols', 'none', '--cleaner', 'none', '--g2p', 'none', '--valid_data_path_and_name_and_type', 'dump/raw/dev/wav.scp,speech,sound', '--valid_shape_file', 'exp/asr_stats_raw_bpe128/valid/speech_shape', '--resume', 'true', '--ignore_init_mismatch', 'false', '--fold_length', '80000', '--output_dir', 'exp/asr_train_asr_e_branchformer_raw_bpe128', '--config', 'conf/train_asr_e_branchformer.yaml', '--frontend_conf', 'fs=16k', '--normalize=global_mvn', '--normalize_conf', 'stats_file=exp/asr_stats_raw_bpe128/train/feats_stats.npz', '--train_data_path_and_name_and_type', 'dump/raw/train/wav.scp,speech,sound', '--train_shape_file', 'exp/asr_stats_raw_bpe128/train/speech_shape', '--fold_length', '150', '--train_data_path_and_name_and_type', 'dump/raw/train/text,text,text', '--train_shape_file', 'exp/asr_stats_raw_bpe128/train/text_shape.bpe', '--valid_data_path_and_name_and_type', 'dump/raw/dev/text,text,text', '--valid_shape_file', 'exp/asr_stats_raw_bpe128/valid/text_shape.bpe', '--ngpu', '8', '--multiprocessing_distributed', 'True']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/launch.py", line 384, in <module>
+    main()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/launch.py", line 375, in main
+    raise RuntimeError(
+RuntimeError: 
+################### The last 1000 lines of exp/asr_train_asr_e_branchformer_raw_bpe128/train.log ###################
+scn39-mn:2846659:2846880 [0] NCCL INFO Connected all rings
+scn39-mn:2846659:2846880 [0] NCCL INFO Connected all trees
+scn39-mn:2846659:2846880 [0] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+scn39-mn:2846659:2846880 [0] NCCL INFO 24 coll channels, 32 p2p channels, 32 p2p channels per peer
+scn39-mn:2846659:2846880 [0] NCCL INFO comm 0x15e08080 rank 0 nranks 8 cudaDev 0 busId 7000 - Init COMPLETE
+scn39-mn:2846665:2846665 [6] NCCL INFO cudaDriverVersion 11000
+scn39-mn:2846665:2846665 [6] NCCL INFO Bootstrap : Using enp226s0:172.50.0.39<0>
+scn39-mn:2846665:2846665 [6] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+scn39-mn:2846665:2846885 [6] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [2]mlx5_2:1/IB [3]mlx5_3:1/IB [4]mlx5_4:1/IB [5]mlx5_5:1/RoCE [6]mlx5_6:1/IB [7]mlx5_7:1/IB [8]mlx5_8:1/IB [9]mlx5_9:1/IB [10]mlx5_10:1/RoCE [11]mlx5_11:1/IB [RO]; OOB enp226s0:172.50.0.39<0>
+scn39-mn:2846665:2846885 [6] NCCL INFO Using network IB
+scn39-mn:2846665:2846885 [6] NCCL INFO Setting affinity for GPU 6 to ffff0000,00000000,00000000,00000000,ffff0000,00000000,00000000
+scn39-mn:2846665:2846885 [6] NCCL INFO Trees [0] 7/-1/-1->6->5 [1] 7/-1/-1->6->5 [2] 7/-1/-1->6->5 [3] 7/-1/-1->6->5 [4] 7/-1/-1->6->5 [5] 7/-1/-1->6->5 [6] 7/-1/-1->6->5 [7] 7/-1/-1->6->5 [8] 7/-1/-1->6->5 [9] 7/-1/-1->6->5 [10] 7/-1/-1->6->5 [11] 7/-1/-1->6->5 [12] 7/-1/-1->6->5 [13] 7/-1/-1->6->5 [14] 7/-1/-1->6->5 [15] 7/-1/-1->6->5 [16] 7/-1/-1->6->5 [17] 7/-1/-1->6->5 [18] 7/-1/-1->6->5 [19] 7/-1/-1->6->5 [20] 7/-1/-1->6->5 [21] 7/-1/-1->6->5 [22] 7/-1/-1->6->5 [23] 7/-1/-1->6->5
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 00/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 01/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 02/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 03/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 04/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 05/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 06/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 07/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 08/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 09/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 10/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 11/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 12/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 13/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 14/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 15/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 16/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 17/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 18/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 19/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 20/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 21/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 22/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 23/0 : 6[b7000] -> 7[bd000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Connected all rings
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 00/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 01/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 02/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 03/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 04/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 05/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 06/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 07/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 08/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 09/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 10/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 11/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 12/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 13/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 14/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 15/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 16/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 17/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 18/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 19/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 20/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 21/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 22/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Channel 23/0 : 6[b7000] -> 5[90000] via P2P/IPC/read
+scn39-mn:2846665:2846885 [6] NCCL INFO Connected all trees
+scn39-mn:2846665:2846885 [6] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+scn39-mn:2846665:2846885 [6] NCCL INFO 24 coll channels, 32 p2p channels, 32 p2p channels per peer
+scn39-mn:2846665:2846885 [6] NCCL INFO comm 0x15922cc0 rank 6 nranks 8 cudaDev 6 busId b7000 - Init COMPLETE
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1430, in main_worker
+    cls.trainer.run(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 304, in run
+    all_steps_are_invalid = cls.train_one_epoch(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 588, in train_one_epoch
+    retval = model(**batch)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 331, in forward
+    loss_att, acc_att, cer_att, wer_att = self._calc_att_loss(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 555, in _calc_att_loss
+    decoder_out, _ = self.decoder(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/decoder/transformer_decoder.py", line 144, in forward
+    x, tgt_mask, memory, memory_mask = decoder_layer(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet/nets/pytorch_backend/transformer/decoder_layer.py", line 168, in forward
+    x = residual + self.dropout(self.feed_forward(x))
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet/nets/pytorch_backend/transformer/positionwise_feed_forward.py", line 32, in forward
+    return self.w_2(self.dropout(self.activation(self.w_1(x))))
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 216.00 MiB (GPU 1; 39.59 GiB total capacity; 36.72 GiB already allocated; 53.19 MiB free; 37.38 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+scn39-mn:2846660:2847082 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+scn39-mn:2846660:2846660 [1] NCCL INFO comm 0x1e8a1fc0 rank 1 nranks 8 cudaDev 1 busId f000 - Abort COMPLETE
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/asr_train.py", line 23, in <module>
+    main()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/asr_train.py", line 19, in main
+    ASRTask.main(cmd=cmd)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1167, in main
+    while not ProcessContext(processes, error_queues).join():
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 149, in join
+    raise ProcessExitedException(
+torch.multiprocessing.spawn.ProcessExitedException: process 1 terminated with exit code 1
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+# Accounting: time=357 threads=1
+# Ended (code 1) at Mon Dec 11 12:51:29 IST 2023, elapsed time 357 seconds
+

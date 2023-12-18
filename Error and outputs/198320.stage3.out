@@ -1,0 +1,26 @@
+Starting at Thursday 07 December 2023 06:52:13 PM IST
+Running on hosts: scn56-10g
+Running on 1 nodes.
+Running 32 tasks.
+Job id is 198320
+Job submission directory is : /nlsasfs/home/nltm-st/akankss/thish/expts/espnet_egs2_001_hindi_all_asr1
+2023-12-07T18:52:16 (asr.sh:283:main) ./asr.sh --stage 3 --stop_stage 3 --train_set train --valid_set dev --test_sets test --nj 32 --audio_format wav --eval_valid_set true
+2023-12-07T18:52:17 (asr.sh:565:main) Skipped stages:  9 14 15 16 
+2023-12-07T18:52:17 (asr.sh:615:main) Stage 3: Format wav.scp: data/ -> dump/raw
+utils/copy_data_dir.sh: copied data from data/train to dump/raw/org/train
+utils/validate_data_dir.sh: Successfully validated data-directory dump/raw/org/train
+2023-12-07T18:52:18 (format_wav_scp.sh:46:main) scripts/audio/format_wav_scp.sh --nj 32 --cmd run.pl --audio-format wav --fs 16k --multi-columns-input false --multi-columns-output false data/train/wav.scp dump/raw/org/train
+2023-12-07T18:52:18 (format_wav_scp.sh:118:main) [info]: without segments
+2023-12-07T18:53:04 (format_wav_scp.sh:153:main) Successfully finished. [elapsed=46s]
+utils/copy_data_dir.sh: copied data from data/dev to dump/raw/org/dev
+utils/validate_data_dir.sh: Successfully validated data-directory dump/raw/org/dev
+2023-12-07T18:53:04 (format_wav_scp.sh:46:main) scripts/audio/format_wav_scp.sh --nj 32 --cmd run.pl --audio-format wav --fs 16k --multi-columns-input false --multi-columns-output false data/dev/wav.scp dump/raw/org/dev
+2023-12-07T18:53:05 (format_wav_scp.sh:118:main) [info]: without segments
+2023-12-07T18:53:09 (format_wav_scp.sh:153:main) Successfully finished. [elapsed=5s]
+utils/copy_data_dir.sh: copied data from data/test to dump/raw/test
+utils/validate_data_dir.sh: Successfully validated data-directory dump/raw/test
+2023-12-07T18:53:09 (format_wav_scp.sh:46:main) scripts/audio/format_wav_scp.sh --nj 32 --cmd run.pl --audio-format wav --fs 16k --multi-columns-input false --multi-columns-output false data/test/wav.scp dump/raw/test
+2023-12-07T18:53:09 (format_wav_scp.sh:118:main) [info]: without segments
+2023-12-07T18:53:15 (format_wav_scp.sh:153:main) Successfully finished. [elapsed=6s]
+2023-12-07T18:53:15 (asr.sh:1863:main) Successfully finished. [elapsed=59s]
+Ended at Thursday 07 December 2023 06:53:15 PM IST

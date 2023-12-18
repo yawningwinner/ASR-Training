@@ -1,0 +1,13 @@
+Starting at Friday 08 December 2023 12:10:05 PM IST
+Running on hosts: scn25-10g
+Running on 1 nodes.
+Running 32 tasks.
+Job id is 198521
+Job submission directory is : /nlsasfs/home/nltm-st/akankss/thish/expts/espnet_egs2_001_hindi_all_asr1
+2023-12-08T12:10:06 (asr.sh:283:main) ./asr.sh --stage 7 --stop_stage 7 --train_set train --valid_set dev --test_sets test --nj 32 --lm_config conf/train_lm_transformer2.yaml --ngpu 1 --nbpe 128
+2023-12-08T12:10:06 (asr.sh:565:main) Skipped stages:  9 14 15 16 
+2023-12-08T12:10:06 (asr.sh:1085:main) Stage 7: LM Training: train_set=dump/raw/lm_train.txt, dev_set=dump/raw/org/dev/text
+2023-12-08T12:10:06 (asr.sh:1122:main) Generate 'exp/lm_train_lm_transformer2_bpe128/run.sh'. You can resume the process from stage 7 using this script
+2023-12-08T12:10:06 (asr.sh:1125:main) LM training started... log: 'exp/lm_train_lm_transformer2_bpe128/train.log'
+2023-12-08T12:18:51 (asr.sh:1863:main) Successfully finished. [elapsed=525s]
+Ended at Friday 08 December 2023 12:18:51 PM IST

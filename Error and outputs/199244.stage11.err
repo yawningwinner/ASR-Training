@@ -1,0 +1,1017 @@
+2023-12-11 11:46:54,011 (launch:94) INFO: /nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/bin/python3 /nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/launch.py --cmd 'run.pl --name exp/asr_train_asr_e_branchformer_raw_bpe128/train.log' --log exp/asr_train_asr_e_branchformer_raw_bpe128/train.log --ngpu 8 --num_nodes 1 --init_file_prefix exp/asr_train_asr_e_branchformer_raw_bpe128/.dist_init_ --multiprocessing_distributed true -- python3 -m espnet2.bin.asr_train --use_preprocessor true --bpemodel data/token_list/bpe_unigram128/bpe.model --token_type bpe --token_list data/token_list/bpe_unigram128/tokens.txt --non_linguistic_symbols none --cleaner none --g2p none --valid_data_path_and_name_and_type dump/raw/dev/wav.scp,speech,sound --valid_shape_file exp/asr_stats_raw_bpe128/valid/speech_shape --resume true --ignore_init_mismatch false --fold_length 80000 --output_dir exp/asr_train_asr_e_branchformer_raw_bpe128 --config conf/train_asr_e_branchformer.yaml --frontend_conf fs=16k --normalize=global_mvn --normalize_conf stats_file=exp/asr_stats_raw_bpe128/train/feats_stats.npz --train_data_path_and_name_and_type dump/raw/train/wav.scp,speech,sound --train_shape_file exp/asr_stats_raw_bpe128/train/speech_shape --fold_length 150 --train_data_path_and_name_and_type dump/raw/train/text,text,text --train_shape_file exp/asr_stats_raw_bpe128/train/text_shape.bpe --valid_data_path_and_name_and_type dump/raw/dev/text,text,text --valid_shape_file exp/asr_stats_raw_bpe128/valid/text_shape.bpe
+2023-12-11 11:46:54,125 (launch:237) INFO: single-node with 8gpu on distributed mode
+2023-12-11 11:46:54,133 (launch:348) INFO: log file: exp/asr_train_asr_e_branchformer_raw_bpe128/train.log
+run.pl: job failed, log is in exp/asr_train_asr_e_branchformer_raw_bpe128/train.log
+Command '['run.pl', '--name', 'exp/asr_train_asr_e_branchformer_raw_bpe128/train.log', '--gpu', '8', 'exp/asr_train_asr_e_branchformer_raw_bpe128/train.log', 'python3', '-m', 'espnet2.bin.asr_train', '--use_preprocessor', 'true', '--bpemodel', 'data/token_list/bpe_unigram128/bpe.model', '--token_type', 'bpe', '--token_list', 'data/token_list/bpe_unigram128/tokens.txt', '--non_linguistic_symbols', 'none', '--cleaner', 'none', '--g2p', 'none', '--valid_data_path_and_name_and_type', 'dump/raw/dev/wav.scp,speech,sound', '--valid_shape_file', 'exp/asr_stats_raw_bpe128/valid/speech_shape', '--resume', 'true', '--ignore_init_mismatch', 'false', '--fold_length', '80000', '--output_dir', 'exp/asr_train_asr_e_branchformer_raw_bpe128', '--config', 'conf/train_asr_e_branchformer.yaml', '--frontend_conf', 'fs=16k', '--normalize=global_mvn', '--normalize_conf', 'stats_file=exp/asr_stats_raw_bpe128/train/feats_stats.npz', '--train_data_path_and_name_and_type', 'dump/raw/train/wav.scp,speech,sound', '--train_shape_file', 'exp/asr_stats_raw_bpe128/train/speech_shape', '--fold_length', '150', '--train_data_path_and_name_and_type', 'dump/raw/train/text,text,text', '--train_shape_file', 'exp/asr_stats_raw_bpe128/train/text_shape.bpe', '--valid_data_path_and_name_and_type', 'dump/raw/dev/text,text,text', '--valid_shape_file', 'exp/asr_stats_raw_bpe128/valid/text_shape.bpe', '--ngpu', '8', '--multiprocessing_distributed', 'True']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/launch.py", line 384, in <module>
+    main()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/launch.py", line 375, in main
+    raise RuntimeError(
+RuntimeError: 
+################### The last 1000 lines of exp/asr_train_asr_e_branchformer_raw_bpe128/train.log ###################
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+[nltk_data] Error loading averaged_perceptron_tagger: <urlopen error
+[nltk_data]     [Errno -2] Name or service not known>
+[nltk_data] Error loading cmudict: <urlopen error [Errno -2] Name or
+[nltk_data]     service not known>
+Process SpawnProcess-4:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1430, in main_worker
+    cls.trainer.run(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 304, in run
+    all_steps_are_invalid = cls.train_one_epoch(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 588, in train_one_epoch
+    retval = model(**batch)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 237, in forward
+    encoder_out, encoder_out_lens = self.encode(speech, speech_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 400, in encode
+    encoder_out, encoder_out_lens, _ = self.encoder(feats, feats_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 475, in forward
+    xs_pad, masks = self.encoders(xs_pad, masks)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet/nets/pytorch_backend/transformer/repeat.py", line 30, in forward
+    args = m(*args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 157, in forward
+    x2 = self.cgmlp(x2, mask)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/layers/cgmlp.py", line 117, in forward
+    xs_pad = self.csgu(xs_pad)  # linear_units -> linear_units/2
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/layers/cgmlp.py", line 71, in forward
+    x_g = self.conv(x_g.transpose(1, 2)).transpose(1, 2)  # (N, T, D/2)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 313, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 309, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 72.00 MiB (GPU 3; 39.59 GiB total capacity; 36.85 GiB already allocated; 71.19 MiB free; 37.36 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Process SpawnProcess-5:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1430, in main_worker
+    cls.trainer.run(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 304, in run
+    all_steps_are_invalid = cls.train_one_epoch(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 588, in train_one_epoch
+    retval = model(**batch)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 237, in forward
+    encoder_out, encoder_out_lens = self.encode(speech, speech_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 400, in encode
+    encoder_out, encoder_out_lens, _ = self.encoder(feats, feats_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 475, in forward
+    xs_pad, masks = self.encoders(xs_pad, masks)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet/nets/pytorch_backend/transformer/repeat.py", line 30, in forward
+    args = m(*args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 157, in forward
+    x2 = self.cgmlp(x2, mask)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/layers/cgmlp.py", line 117, in forward
+    xs_pad = self.csgu(xs_pad)  # linear_units -> linear_units/2
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/layers/cgmlp.py", line 71, in forward
+    x_g = self.conv(x_g.transpose(1, 2)).transpose(1, 2)  # (N, T, D/2)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 313, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 309, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 72.00 MiB (GPU 4; 39.59 GiB total capacity; 36.85 GiB already allocated; 71.19 MiB free; 37.36 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1430, in main_worker
+    cls.trainer.run(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 304, in run
+    all_steps_are_invalid = cls.train_one_epoch(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 588, in train_one_epoch
+    retval = model(**batch)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 237, in forward
+    encoder_out, encoder_out_lens = self.encode(speech, speech_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 400, in encode
+    encoder_out, encoder_out_lens, _ = self.encoder(feats, feats_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 475, in forward
+    xs_pad, masks = self.encoders(xs_pad, masks)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet/nets/pytorch_backend/transformer/repeat.py", line 30, in forward
+    args = m(*args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 157, in forward
+    x2 = self.cgmlp(x2, mask)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/layers/cgmlp.py", line 117, in forward
+    xs_pad = self.csgu(xs_pad)  # linear_units -> linear_units/2
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/layers/cgmlp.py", line 71, in forward
+    x_g = self.conv(x_g.transpose(1, 2)).transpose(1, 2)  # (N, T, D/2)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 313, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 309, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 72.00 MiB (GPU 0; 39.59 GiB total capacity; 36.90 GiB already allocated; 47.19 MiB free; 37.52 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Process SpawnProcess-6:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1430, in main_worker
+    cls.trainer.run(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 304, in run
+    all_steps_are_invalid = cls.train_one_epoch(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 588, in train_one_epoch
+    retval = model(**batch)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 237, in forward
+    encoder_out, encoder_out_lens = self.encode(speech, speech_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 400, in encode
+    encoder_out, encoder_out_lens, _ = self.encoder(feats, feats_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 475, in forward
+    xs_pad, masks = self.encoders(xs_pad, masks)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet/nets/pytorch_backend/transformer/repeat.py", line 30, in forward
+    args = m(*args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 157, in forward
+    x2 = self.cgmlp(x2, mask)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/layers/cgmlp.py", line 117, in forward
+    xs_pad = self.csgu(xs_pad)  # linear_units -> linear_units/2
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/layers/cgmlp.py", line 71, in forward
+    x_g = self.conv(x_g.transpose(1, 2)).transpose(1, 2)  # (N, T, D/2)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 313, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 309, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 72.00 MiB (GPU 5; 39.59 GiB total capacity; 36.85 GiB already allocated; 71.19 MiB free; 37.36 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Process SpawnProcess-3:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1430, in main_worker
+    cls.trainer.run(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 304, in run
+    all_steps_are_invalid = cls.train_one_epoch(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 588, in train_one_epoch
+    retval = model(**batch)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 237, in forward
+    encoder_out, encoder_out_lens = self.encode(speech, speech_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 400, in encode
+    encoder_out, encoder_out_lens, _ = self.encoder(feats, feats_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 475, in forward
+    xs_pad, masks = self.encoders(xs_pad, masks)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet/nets/pytorch_backend/transformer/repeat.py", line 30, in forward
+    args = m(*args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 157, in forward
+    x2 = self.cgmlp(x2, mask)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/layers/cgmlp.py", line 117, in forward
+    xs_pad = self.csgu(xs_pad)  # linear_units -> linear_units/2
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/layers/cgmlp.py", line 71, in forward
+    x_g = self.conv(x_g.transpose(1, 2)).transpose(1, 2)  # (N, T, D/2)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 313, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 309, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 72.00 MiB (GPU 2; 39.59 GiB total capacity; 36.85 GiB already allocated; 67.19 MiB free; 37.36 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Process SpawnProcess-7:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1430, in main_worker
+    cls.trainer.run(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 304, in run
+    all_steps_are_invalid = cls.train_one_epoch(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 588, in train_one_epoch
+    retval = model(**batch)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 237, in forward
+    encoder_out, encoder_out_lens = self.encode(speech, speech_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 400, in encode
+    encoder_out, encoder_out_lens, _ = self.encoder(feats, feats_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 475, in forward
+    xs_pad, masks = self.encoders(xs_pad, masks)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet/nets/pytorch_backend/transformer/repeat.py", line 30, in forward
+    args = m(*args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 157, in forward
+    x2 = self.cgmlp(x2, mask)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/layers/cgmlp.py", line 117, in forward
+    xs_pad = self.csgu(xs_pad)  # linear_units -> linear_units/2
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/layers/cgmlp.py", line 71, in forward
+    x_g = self.conv(x_g.transpose(1, 2)).transpose(1, 2)  # (N, T, D/2)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 313, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 309, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 72.00 MiB (GPU 6; 39.59 GiB total capacity; 36.85 GiB already allocated; 71.19 MiB free; 37.36 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Process SpawnProcess-8:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1430, in main_worker
+    cls.trainer.run(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 304, in run
+    all_steps_are_invalid = cls.train_one_epoch(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 588, in train_one_epoch
+    retval = model(**batch)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 237, in forward
+    encoder_out, encoder_out_lens = self.encode(speech, speech_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 400, in encode
+    encoder_out, encoder_out_lens, _ = self.encoder(feats, feats_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 475, in forward
+    xs_pad, masks = self.encoders(xs_pad, masks)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet/nets/pytorch_backend/transformer/repeat.py", line 30, in forward
+    args = m(*args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 174, in forward
+    x = residual + self.ff_scale * self.dropout(self.feed_forward(x))
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet/nets/pytorch_backend/transformer/positionwise_feed_forward.py", line 32, in forward
+    return self.w_2(self.dropout(self.activation(self.w_1(x))))
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet/nets/pytorch_backend/conformer/swish.py", line 18, in forward
+    return x * torch.sigmoid(x)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 48.00 MiB (GPU 7; 39.59 GiB total capacity; 37.12 GiB already allocated; 45.19 MiB free; 37.52 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1430, in main_worker
+    cls.trainer.run(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 304, in run
+    all_steps_are_invalid = cls.train_one_epoch(
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/train/trainer.py", line 588, in train_one_epoch
+    retval = model(**batch)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 237, in forward
+    encoder_out, encoder_out_lens = self.encode(speech, speech_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/espnet_model.py", line 400, in encode
+    encoder_out, encoder_out_lens, _ = self.encoder(feats, feats_lengths)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 475, in forward
+    xs_pad, masks = self.encoders(xs_pad, masks)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet/nets/pytorch_backend/transformer/repeat.py", line 30, in forward
+    args = m(*args)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/asr/encoder/e_branchformer_encoder.py", line 146, in forward
+    x_att = self.attn(x1, x1, x1, pos_emb, mask)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet/nets/pytorch_backend/transformer/attention.py", line 305, in forward
+    return self.forward_attention(v, scores, mask)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet/nets/pytorch_backend/transformer/attention.py", line 88, in forward_attention
+    x = torch.matmul(p_attn, value)  # (batch, head, time1, d_k)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 106.00 MiB (GPU 1; 39.59 GiB total capacity; 36.91 GiB already allocated; 95.19 MiB free; 37.33 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+scn40-mn:87825:88358 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+scn40-mn:87826:88357 [4] NCCL INFO [Service thread] Connection closed by localRank 4
+scn40-mn:87827:88360 [5] NCCL INFO [Service thread] Connection closed by localRank 5
+scn40-mn:87825:87825 [3] NCCL INFO comm 0x18f35f40 rank 3 nranks 8 cudaDev 3 busId 4e000 - Abort COMPLETE
+scn40-mn:87826:87826 [4] NCCL INFO comm 0x148f67c0 rank 4 nranks 8 cudaDev 4 busId 87000 - Abort COMPLETE
+scn40-mn:87824:88355 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+scn40-mn:87822:88359 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+scn40-mn:87823:88354 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+scn40-mn:87828:88356 [6] NCCL INFO [Service thread] Connection closed by localRank 6
+scn40-mn:87829:88353 [7] NCCL INFO [Service thread] Connection closed by localRank 7
+scn40-mn:87827:87827 [5] NCCL INFO comm 0x9b8c640 rank 5 nranks 8 cudaDev 5 busId 90000 - Abort COMPLETE
+scn40-mn:87822:87822 [0] NCCL INFO comm 0x60c26330 rank 0 nranks 8 cudaDev 0 busId 7000 - Abort COMPLETE
+scn40-mn:87829:87829 [7] NCCL INFO comm 0x17a5ac40 rank 7 nranks 8 cudaDev 7 busId bd000 - Abort COMPLETE
+scn40-mn:87824:87824 [2] NCCL INFO comm 0x18bd0a80 rank 2 nranks 8 cudaDev 2 busId 47000 - Abort COMPLETE
+scn40-mn:87828:87828 [6] NCCL INFO comm 0x1fd30100 rank 6 nranks 8 cudaDev 6 busId b7000 - Abort COMPLETE
+scn40-mn:87823:87823 [1] NCCL INFO comm 0x17a3e400 rank 1 nranks 8 cudaDev 1 busId f000 - Abort COMPLETE
+Traceback (most recent call last):
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/asr_train.py", line 23, in <module>
+    main()
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/bin/asr_train.py", line 19, in main
+    ASRTask.main(cmd=cmd)
+  File "/nlsasfs/home/nltm-st/akankss/espnet/espnet2/tasks/abs_task.py", line 1167, in main
+    while not ProcessContext(processes, error_queues).join():
+  File "/nlsasfs/home/nltm-st/akankss/espnet/tools/miniconda/envs/espnet/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 149, in join
+    raise ProcessExitedException(
+torch.multiprocessing.spawn.ProcessExitedException: process 5 terminated with exit code 1
+# Accounting: time=363 threads=1
+# Ended (code 1) at Mon Dec 11 11:52:57 IST 2023, elapsed time 363 seconds
+

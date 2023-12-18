@@ -1,0 +1,14 @@
+Starting at Monday 11 December 2023 03:42:14 PM IST
+Running on hosts: scn2-10g
+Running on 1 nodes.
+Running 32 tasks.
+Job id is 199377
+Job submission directory is : /nlsasfs/home/nltm-st/akankss/thish/expts/espnet_egs2_001_hindi_all_asr1
+2023-12-11T15:42:14 (asr.sh:283:main) ./asr.sh --stage 12 --stop_stage 12 --train_set train --valid_set dev --test_sets test --use_ngram false --use_lm true --ngpu 1 --gpu_inference true --inference_nj 1 --asr_exp exp/asr_train_asr_e_branchformer_raw_bpe128 --lm_exp exp/lm_train_lm_transformer2_bpe128 --ngram_exp exp/ngram --inference_config conf/decode_asr.yaml
+2023-12-11T15:42:15 (asr.sh:565:main) Skipped stages:  9 14 15 16 
+2023-12-11T15:42:15 (asr.sh:1481:main) Stage 12: Decoding: training_dir=exp/asr_train_asr_e_branchformer_raw_bpe128
+2023-12-11T15:42:15 (asr.sh:1509:main) Generate 'exp/asr_train_asr_e_branchformer_raw_bpe128/decode_asr_lm_lm_train_lm_transformer2_bpe128_valid.loss.ave_asr_model_valid.acc.ave/run.sh'. You can resume the process from stage 12 using this script
+2023-12-11T15:42:15 (asr.sh:1574:main) Decoding started... log: 'exp/asr_train_asr_e_branchformer_raw_bpe128/decode_asr_lm_lm_train_lm_transformer2_bpe128_valid.loss.ave_asr_model_valid.acc.ave/test/logdir/asr_inference.*.log'
+2023-12-11T17:46:42 (asr.sh:1590:main) Calculating RTF & latency... log: 'exp/asr_train_asr_e_branchformer_raw_bpe128/decode_asr_lm_lm_train_lm_transformer2_bpe128_valid.loss.ave_asr_model_valid.acc.ave/test/logdir/calculate_rtf.log'
+2023-12-11T17:46:44 (asr.sh:1863:main) Successfully finished. [elapsed=7470s]
+Ended at Monday 11 December 2023 05:46:48 PM IST

@@ -1,0 +1,13 @@
+Starting at Friday 08 December 2023 12:27:47 PM IST
+Running on hosts: scn25-10g
+Running on 1 nodes.
+Running 32 tasks.
+Job id is 198537
+Job submission directory is : /nlsasfs/home/nltm-st/akankss/thish/expts/espnet_egs2_001_hindi_all_asr1
+2023-12-08T12:27:47 (asr.sh:283:main) ./asr.sh --stage 8 --stop_stage 8 --train_set train --valid_set dev --test_sets test --ngpu 1 --nj 32 --lm_exp exp/lm_train_lm_transformer2_bpe128
+2023-12-08T12:27:48 (asr.sh:565:main) Skipped stages:  9 14 15 16 
+2023-12-08T12:27:48 (asr.sh:1161:main) Stage 8: Calc perplexity: dump/raw/test/text
+2023-12-08T12:27:48 (asr.sh:1164:main) Perplexity calculation started... log: 'exp/lm_train_lm_transformer2_bpe128/perplexity_test/lm_calc_perplexity.log'
+2023-12-08T12:28:27 (asr.sh:1174:main) PPL: dump/raw/test/text: 41.055507482471256
+2023-12-08T12:28:27 (asr.sh:1863:main) Successfully finished. [elapsed=40s]
+Ended at Friday 08 December 2023 12:28:27 PM IST
